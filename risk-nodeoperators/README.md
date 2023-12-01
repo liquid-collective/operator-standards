@@ -4,7 +4,8 @@ Node operators (NOs) play an important role in the security and performance of t
 
 Currently, there are no widely accepted standards for benchmarking the technical competency of Ethereum NOs. In order to uphold Liquid Collective's mission to be the most secure and transparent liquid staking protocol, it is necessary to establish a benchmarking process that can be used to objectively determine whether NOs maintain an enterprise grade standard for security, infrastructure, and other relevant categories.
 
-## What’s next
+<br/>
+<h2>What’s next</h2>
 Members from Liquid Collective’s Node Operator Working Group are actively working on an open risk evaluation and benchmarking methodology as part of this NO Standards initiative&mdash;one that can be used to objectively determine if a node operator maintains an enterprise-grade standard for security, infrastructure, and other relevant risk categories. 
 
 The first phases of the risk methodology will be published in this repository in the near future for community feedback.

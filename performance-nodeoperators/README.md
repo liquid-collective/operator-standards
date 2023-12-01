@@ -87,13 +87,13 @@ We ran extensive analyses on data spanning back to the Beacon Chain genesis bloc
 <li><b>Result 3</b>: According to the design goals set, the RAVER and oppcost2 (the best measure of opportunity cost benchmarking) were shortlisted as the best performance metrics. The two metrics were found to be correlated to the tune of ~98%. This is expected as they largely track the same source material from two different vantage points; top-down (oppcost2) and bottom-up (RAVER). The main difference is that the RAVER does not capture sync committee duties (this is so by design, so as to remove the “randomness” and advantage of operation size in the sync committee selection process).</li>
 </ul>
 
+<br/>
 
 ## The Performance Methodology 
 
 Given the above, we proposed a layered performance methodology that captures the deterministic elements of NO performance at the consensus and execution layers of operation, separately. We proposed (i) the Rated Validator Effectiveness Rating (hereon RAVER) as the measure of performance for the CL, and (ii) a target rate for successful proposals, at the operator level.
 
-  
-
+<br/>
 
 <table>
 <tr>
@@ -112,7 +112,7 @@ Given the above, we proposed a layered performance methodology that captures the
 <td>EXECUTION LAYER</td>
 </table>
 
-  
+<br/>
     
 
 > [!NOTE]
@@ -122,7 +122,8 @@ Given the above, we proposed a layered performance methodology that captures the
 > <li>The RAVER is already well adopted by operators via the Rated Network Explorer and a more familiar interface.</li>
 > <li>The RAVER does not include sync committee participation, which introduces noise into the metric definition.</li>
 > </ol>
-
+<br/>
+<br/>
 
 ### The RAVER
 
@@ -130,13 +131,15 @@ The Rated Validator Effectiveness Rating (RAVER) is a measure of how well a vali
 
 An Ethereum validator’s performance is largely described by its attestation and block proposal duties and responsibilities to the network. As such, attester effectiveness and proposer effectiveness are the key components of the RAVER. Essentially, it is a unified effectiveness rating that combines attester and proposer effectiveness. 
 
-~~~
-RAVER == [3/8 * proposer_effectiveness] + [5/8 * attester_effectiveness]
-~~~ 
+> <div style="text-align: center;">
+> RAVER == [3/8 * proposer_effectiveness] + [5/8 * attester_effectiveness]
+> </div>
+
 
 #### Attester effectiveness
 
 Validators are called to attest once in every epoch. These attestations are important consensus material. When attesting, validators vote on their version of the perceived state of the chain, which is described by a handful of distinct variables. When validators perform their duties appropriately, they earn rewards; if they do not, they are penalized. For more information on the core duties related to attestations and the calculation of attester effectiveness, please refer to Rated’s documentation [here](https://docs.rated.network/methodologies/ethereum-beacon-chain/rated-effectiveness-rating).
+
 
 #### Proposer effectiveness
 
@@ -145,6 +148,7 @@ A block proposer is a validator that is chosen to pack the attestation informati
 Being elected as a proposer has a much lower probability attached to it (<i>32/active Ethereum validators</i>), compared to a validator’s attestation duties (which is 100%). 
 
 For more information on the computation of the RAVER, please refer to Rated’s documentation [here](https://docs.rated.network/methodologies/ethereum-beacon-chain/rated-effectiveness-rating/effectiveness-rating).
+
 
 ### Missed blocks quota
 
@@ -155,6 +159,8 @@ In order to capture the outsized effect a large number of missed blocks could ha
 Importantly, though, it should be noted that the recommendation is that proposals that are missed by no fault of the operator (e.g. a MEV Relay unblinding the payload late) should not be included in the tally. Agency might be tricky to attribute in some cases (e.g. a bug with a recent client release, but the operator having not tested the release or upgraded too early), and as such we encourage taking an iterative approach in dictionary-building for the various permutations of these cases.
 
 <i>The methodology and benchmark for missed blocks quota are still being evaluated. The evaluation phase will be followed by an outreach for feedback from the Ethereum community and members of the Liquid Collective.</i>
+
+<br/>
 
 ## Benchmarking
 
@@ -174,11 +180,16 @@ This initial benchmark was determined through extensive analysis of performance 
 
 In order to then avoid being overly punitive to NOs, we decided to set the initial benchmark at the 50th percentile (or the median RAVER) minus one standard deviation. 
 
+<br/>
+<br/>
 <figure>
     <img src="/performance-nodeoperators/Images/2023-performance-1.png"
-         alt="Probability density function illustrating how performance via RAVER is distributed for large(er) operators.">
+         alt="Probability density function illustrating how performance via RAVER is distributed for large(er) operators."
+         width="750">
     <figcaption><i>The above probability density function is an illustration of how performance via RAVER is distributed for large(er) operators. The purple shaded area represents “sub-par” performance as defined by the selected benchmark.</i></figcaption>
 </figure>
+<br/>
+<br/>
 
 This adjustment is designed to prevent the penalization of NOs for minor performance dips below the benchmark, especially considering the tight correlation observed around the median RAVER. As we make progress in defining risk standards for NOs and deepen our understanding of how various risk categories and  risk mitigation strategies impact their performance, we will make further adjustments.
 
@@ -204,6 +215,8 @@ To incentivize performance above the Benchmark, NOs will need to credit the prot
 <li><b>NOC</b> = Node Operator Credits</li>
 </ul>
 
+<br/>
+
 > <div style="text-align: center;">
 > 
 > When R<sub>NOt</sub> < B<sub>t</sub> ;
@@ -213,6 +226,8 @@ To incentivize performance above the Benchmark, NOs will need to credit the prot
 > Else, <i>NOC = 0</i>
 >
 > </div>
+
+<br/>
 
 <h4><i>B<sub>t</sub> - R<sub>NOt</sub></i></h4>
 
@@ -227,12 +242,17 @@ For more information on how missed rewards are calculated, see [here](https://do
 <h4><i>(EAt /EAMt)</i></h4>
 Since the MCLPR<sub>t</sub> is a metric derived at the validator level, we have to re-modulate the rewards calculation at the duty level to be consistent with the node operator RAVER calculation. Recall that the RAVER is calculated at the duty level to ensure it is not affected by a validator’s activation time. Given this, the modulation is done by using the proportion of the total epochs a node operator’s validator set is active in the time period (E<sub>At</sub>) versus the maximum possible epochs the same validator set could have been active (E<sub>AMt</sub>). Epochs are used here since duties are assigned by the protocol every epoch. In other words, E<sub>At</sub> is the summation of each individual validator’s number of active epochs and E<sub>AMt</sub> is the number of epochs in the time period multiplied by validators controlled by the operator (VC<sub>NOt</sub>).
 
+<br/>
+
 <h4><i>Example:</i></h4>  
 We are in Q3, 2023. On Sept 1st we are going to evaluate the theoretical Liquid Collective Node Operator 1 for the month of August.    
-   
+
+<br/>
 
 Data for Node Operator 1 
   
+<br/>
+
 <table>
 <tr>
 <td>RAVER 50th percentile</td>
@@ -253,6 +273,8 @@ Data for Node Operator 1
 <td>10</td>
 </table>
 
+<br/>
+
 #### Calculation of credits  
 
 <b>B<sub>t</sub></b> = 96%  
@@ -261,18 +283,21 @@ Data for Node Operator 1
 <b>VC<sub>NOt</sub></b> = 1,010  
 <b>E<sub>AMt</sub></b> = 1,010 * 225 epochs * 31 days = 7,044,750  
 <b>E<sub>At</sub></b> = (1,000 * 225 epochs * 31 days) + (10 * 225 epochs * 11 days) = 6,999,750  
-  
+  <br/>
 <b>NOC</b> = (B<sub>t</sub> - R<sub>NOt</sub>) * MCLPR<sub>t</sub> * VC<sub>NOt</sub> * (E<sub>At</sub> / E<sub>AMt</sub>)
 NOC = (96 - 95) * 0.002 ETH * 1,010 * (6,999,750 / 7,044,750)  
 NOC = 0.002 ETH * 1,010 * 0.9936  
 <b>NOC = 2.007 ETH</b>  
-  
+  <br/>
 Based on August’s performance, Node Operator 1 will owe 2.007 ETH to the Liquid Collective protocol.
-
+<br/>
+<br/>
 
 ### Liquid Collective’s Node Operator Working Group
 
 To validate our findings and improve the performance methodology, a working group was formed with members from <b>[Rated Labs](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all), [Alluvial](https://alluvial.finance/), [Figment](https://figment.io/), [Coinbase Cloud](https://www.coinbase.com/cloud), and [Staked](https://staked.us/)</b>. It was important to engage and collaborate with leading NOs in the space to help shape and validate the methodologies and evaluation processes. The working group multiple times to hear presentations, provide feedback, debate, improve, and align behind the methodologies and respective benchmarks. 
+
+<br/>
 
 ## What's next
 
