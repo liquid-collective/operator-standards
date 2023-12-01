@@ -1,0 +1,1 @@
+## Developing an Ethereum Node Operator Performance Methodology
