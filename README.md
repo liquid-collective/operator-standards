@@ -1,5 +1,5 @@
 # Ethereum Node Operator Performance & Risk Standards 
-<i>The first open methodology for evaluating Ethereum node operator performance and risk.</i>
+  
 
 ## The imperative for node operator performance and risk standards
 
