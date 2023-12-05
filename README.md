@@ -1,6 +1,9 @@
 # Ethereum Node Operator Performance & Risk Standards 
-  
-<br/>
+
+![Ethereum Node Operator Performance & Risk Standards ](https://github.com/liquid-collective/operator-standards/assets/763664/25e6ec37-f530-4e4d-91d0-0286fed920dc)
+
+
+
 <h2>The imperative for node operator performance and risk standards</h2>
 
 Performance and security data related to proof of stake (PoS) validators and their operators is mission-critical. In the competitive landscape of securing Ethereum, it's imperative for stakers to be confident in the proficiency of their chosen service providers. The stakes are high—both in terms of ETH staked and the potential risks of participation, including slashing and extended underperformance during an incident. Currently, assessing the security measures and performance of node operators is challenging at best, and often not possible at all.
