@@ -295,7 +295,7 @@ Based on August’s performance, Node Operator 1 will owe 2.007 ETH to the Liqui
 
 ### Liquid Collective’s Node Operator Working Group
 
-To validate our findings and improve the performance methodology, a working group was formed with members from <b>[Rated Labs](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all), [Alluvial](https://alluvial.finance/), [Figment](https://figment.io/), [Coinbase Cloud](https://www.coinbase.com/cloud), and [Staked](https://staked.us/)</b>. It was important to engage and collaborate with leading NOs in the space to help shape and validate the methodologies and evaluation processes. The working group multiple times to hear presentations, provide feedback, debate, improve, and align behind the methodologies and respective benchmarks. 
+To validate our findings and improve the performance methodology, a working group was formed with members from <b>[Rated Labs](https://www.rated.network/home), [Alluvial](https://alluvial.finance/), [Figment](https://figment.io/), [Coinbase Cloud](https://www.coinbase.com/cloud), and [Staked](https://staked.us/)</b>. It was important to engage and collaborate with leading NOs in the space to help shape and validate the methodologies and evaluation processes. The working group multiple times to hear presentations, provide feedback, debate, improve, and align behind the methodologies and respective benchmarks. 
 
 <br/>
 

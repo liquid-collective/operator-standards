@@ -13,7 +13,7 @@ The Ethereum ecosystem has lacked a uniform set of metrics and methodologies to 
 <br/>
 <h2>A collaborative solution: Building objective methodologies to evaluate staking providers</h2>
 
-In response to this need, [Rated Labs](https://www.rated.network/?network=mainnet&view=pool&timeWindow=1d&page=1&poolType=all), a web3 infrastructure and data company working on “Reputation for Machines”, and [Liquid Collective](https://liquidcollective.io/), the broad and dispersed community of industry participants building the Liquid Collective liquid staking protocol, [announced a collaborative initiative](https://liquidcollective.io/announcing-validator-standards/) in July 2023 to define and develop the first open validator performance and security standards for the Ethereum ecosystem, along with industry-wide benchmarks for evaluating professional node operators.
+In response to this need, [Rated Labs](https://www.rated.network/home), a web3 infrastructure and data company working on “Reputation for Machines”, and [Liquid Collective](https://liquidcollective.io/), the broad and dispersed community of industry participants building the Liquid Collective liquid staking protocol, [announced a collaborative initiative](https://liquidcollective.io/announcing-validator-standards/) in July 2023 to define and develop the first open validator performance and security standards for the Ethereum ecosystem, along with industry-wide benchmarks for evaluating professional node operators.
 
 <br/>
 <h2>Application and impact</h2>
